@@ -30,5 +30,5 @@
 hypr/monitors.conf
 hypr/workspaces.conf
 
-!rpcs3/dev_dd0/home/00000001/savedata/*
-!rpcs3/dev_dd0/home/00000001/savedata
+!rpcs3/dev_hdd0/home/00000001/savedata/*
+!rpcs3/dev_hdd0/home/00000001/savedata
