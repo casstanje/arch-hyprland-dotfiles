@@ -30,4 +30,5 @@
 hypr/monitors.conf
 hypr/workspaces.conf
 
-!rpcs3/**/savedata/
+!rpcs3/**/savedata/*
+!rpcs3/**/savedata/*/*
