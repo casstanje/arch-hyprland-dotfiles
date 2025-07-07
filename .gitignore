@@ -1,6 +1,7 @@
 *
 
 !.gitignore
+!kitty
 !kitty/*
 !Kvantum/*
 !evolution/*
