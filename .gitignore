@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!kitty/*
+!Kvantum/*
+!evolution/*
+!fastfetch/*
+!dunst/*
+!waybar/*
+!hypr/*
+!qt6ct/*
+!geart/*
+!cava/*
+!wofi/*
+!nemo/*
+!nwg-look/*
