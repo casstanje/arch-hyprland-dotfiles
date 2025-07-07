@@ -31,6 +31,6 @@ hypr/monitors.conf
 hypr/workspaces.conf
 
 # RPCS3 savedata
-!rpcs3/.*SAV
-!rpcs3/*.PNG
-!rpcs3/*.SFO
+!rpcs3/**.SAV
+!rpcs3/**.PNG
+!rpcs3/**.SFO
