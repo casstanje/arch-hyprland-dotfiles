@@ -1,0 +1,208 @@
+<!--Sce-Np-Trophy-Signature: 4c39b98c01000000000000006dc4b56bcd2348aa86d8ac7f5b4e1bcf8ae8440519a362b0c40b1d582fc57221a6bbcbbb9211a0d8d0330d2bc6ab66fd2255ac63b35efb4d6015c7a1d0d0e33f54d823c1ca8939aee73f35c6151b8dbef68a3ca6311e77c41514953ebc20933592b3ebd0e098be1d92c38ba4398151dbbb30afa92d7b9138b4f7af191d87640c4d25de5d09e8f22cf92cda38fd31d17938fad78c-->
+<trophyconf version="1.1">
+ <npcommid>NPWR01848_00</npcommid>
+ <trophyset-version>01.00</trophyset-version>
+ <parental-level license-area="default">0</parental-level>
+ <title-name>METAL GEAR SOLID PEACE WALKER HD EDITION</title-name>
+ <title-detail>METAL GEAR SOLID PEACE WALKER HD EDITION Trophy Collection</title-detail>
+ <trophy id="000" hidden="no" ttype="P" pid="-1">
+  <name>Vic Boss</name>
+  <detail>Obtained every trophy.</detail>
+ </trophy>
+ <trophy id="001" hidden="yes" ttype="B" pid="000">
+  <name>An Army Without Borders</name>
+  <detail>Cleared Prologue: An Army Without Borders.</detail>
+ </trophy>
+ <trophy id="002" hidden="yes" ttype="B" pid="000">
+  <name>A Country Without An Army</name>
+  <detail>Cleared Chapter 1: A Country Without An Army.</detail>
+ </trophy>
+ <trophy id="003" hidden="yes" ttype="B" pid="000">
+  <name>The Phantom Hero</name>
+  <detail>Cleared Chapter 2: The Phantom Hero.</detail>
+ </trophy>
+ <trophy id="004" hidden="yes" ttype="B" pid="000">
+  <name>A Nation Reborn</name>
+  <detail>Cleared Chapter 3: A Nation Reborn.</detail>
+ </trophy>
+ <trophy id="005" hidden="yes" ttype="B" pid="000">
+  <name>The Illusion of Peace</name>
+  <detail>Cleared Chapter 4: The Illusion of Peace.</detail>
+ </trophy>
+ <trophy id="006" hidden="yes" ttype="B" pid="000">
+  <name>Outer Heaven</name>
+  <detail>Cleared Chapter 5: Outer Heaven.&#x0a;</detail>
+ </trophy>
+ <trophy id="007" hidden="no" ttype="B" pid="000">
+  <name>MAIN OPS All Rank A</name>
+  <detail>Cleared all MAIN OPS missions at Rank A or higher.</detail>
+ </trophy>
+ <trophy id="008" hidden="no" ttype="S" pid="000">
+  <name>MAIN OPS All Rank S</name>
+  <detail>Cleared all MAIN OPS missions at Rank S.</detail>
+ </trophy>
+ <trophy id="009" hidden="no" ttype="B" pid="000">
+  <name>EXTRA OPS All Cleared</name>
+  <detail>Cleared all EXTRA OPS missions.</detail>
+ </trophy>
+ <trophy id="010" hidden="no" ttype="B" pid="000">
+  <name>EXTRA OPS All Rank A</name>
+  <detail>Cleared all EXTRA OPS missions at Rank A or higher.</detail>
+ </trophy>
+ <trophy id="011" hidden="no" ttype="S" pid="000">
+  <name>EXTRA OPS All Rank S</name>
+  <detail>Cleared all EXTRA OPS missions at Rank S.</detail>
+ </trophy>
+ <trophy id="012" hidden="no" ttype="G" pid="000">
+  <name>Big Boss</name>
+  <detail>Cleared all MAIN OPS and EXTRA OPS missions at Rank S.</detail>
+ </trophy>
+ <trophy id="013" hidden="yes" ttype="B" pid="000">
+  <name>You have far too many Game Overs</name>
+  <detail>Reached 50 or more game overs.</detail>
+ </trophy>
+ <trophy id="014" hidden="yes" ttype="B" pid="000">
+  <name>Don't you have anything else to do with your time?</name>
+  <detail>Rolled 100 times or more in a single mission.</detail>
+ </trophy>
+ <trophy id="015" hidden="no" ttype="B" pid="000">
+  <name>Fulton Recovery Veteran</name>
+  <detail>Reached 300 Fulton recoveries.</detail>
+ </trophy>
+ <trophy id="016" hidden="no" ttype="B" pid="000">
+  <name>Hold-Up Artist</name>
+  <detail>Reached 100 hold-ups.</detail>
+ </trophy>
+ <trophy id="017" hidden="no" ttype="B" pid="000">
+  <name>Lethal Enforcer</name>
+  <detail>Reached 100 kills.</detail>
+ </trophy>
+ <trophy id="018" hidden="no" ttype="B" pid="000">
+  <name>Stun Specialist</name>
+  <detail>Reached at least 100 stun attacks or sleep-inducing attacks.</detail>
+ </trophy>
+ <trophy id="019" hidden="no" ttype="B" pid="000">
+  <name>Costume Collector</name>
+  <detail>Obtained every costume.</detail>
+ </trophy>
+ <trophy id="020" hidden="no" ttype="S" pid="000">
+  <name>Special Staff Recruiter</name>
+  <detail>Assembled all special staff members.</detail>
+ </trophy>
+ <trophy id="021" hidden="no" ttype="B" pid="000">
+  <name>Hideo Kojima</name>
+  <detail>Recruited Hideo Kojima.</detail>
+ </trophy>
+ <trophy id="022" hidden="no" ttype="B" pid="000">
+  <name>Mech Catcher</name>
+  <detail>Captured a mech.</detail>
+ </trophy>
+ <trophy id="023" hidden="yes" ttype="S" pid="000">
+  <name>Gives me infinite ammo</name>
+  <detail>Acquired Infinity Bandana. Never worry about running out of bullets ever again.</detail>
+ </trophy>
+ <trophy id="024" hidden="yes" ttype="S" pid="000">
+  <name>Stealth camouflage</name>
+  <detail>Acquired stealth camouflage. Never worry about being detected ever again.</detail>
+ </trophy>
+ <trophy id="025" hidden="yes" ttype="B" pid="000">
+  <name>Kuwabara, Kuwabara</name>
+  <detail>Heard a ghost on the radio.</detail>
+ </trophy>
+ <trophy id="026" hidden="no" ttype="B" pid="000">
+  <name>Paz's Thoughts</name>
+  <detail>Read all of Paz's diary.</detail>
+ </trophy>
+ <trophy id="027" hidden="no" ttype="B" pid="000">
+  <name>Huey's Thoughts</name>
+  <detail>Read Huey's love letter.</detail>
+ </trophy>
+ <trophy id="028" hidden="no" ttype="B" pid="000">
+  <name>Strangelove's Thoughts </name>
+  <detail>Read all of Strangelove's memoirs.</detail>
+ </trophy>
+ <trophy id="029" hidden="no" ttype="B" pid="000">
+  <name>Monster Hunter</name>
+  <detail>Cleared all hunting quests.</detail>
+ </trophy>
+ <trophy id="030" hidden="no" ttype="B" pid="000">
+  <name>CQC Six Shot</name>
+  <detail>Performed CQC six times in a row.</detail>
+ </trophy>
+ <trophy id="031" hidden="yes" ttype="B" pid="000">
+  <name>I'm dead serious</name>
+  <detail>Threw a chaff grenade at ZEKE (single player only).</detail>
+ </trophy>
+ <trophy id="032" hidden="no" ttype="B" pid="000">
+  <name>Leap of Faith</name>
+  <detail>Performed a Leap of Faith.</detail>
+ </trophy>
+ <trophy id="033" hidden="yes" ttype="B" pid="000">
+  <name>You're pretty good</name>
+  <detail>Shot enemy right in the middle of the rear end.</detail>
+ </trophy>
+ <trophy id="034" hidden="no" ttype="B" pid="000">
+  <name>I feel... safe</name>
+  <detail>Wearing a cardboard box gives you that feeling of inner peace.</detail>
+ </trophy>
+ <trophy id="035" hidden="no" ttype="B" pid="000">
+  <name>Indirect Attack</name>
+  <detail>Attacked enemy soldiers by blowing up an oil drum or truck (single player only).</detail>
+ </trophy>
+ <trophy id="036" hidden="yes" ttype="B" pid="000">
+  <name>Launched ZEKE</name>
+  <detail>Complete Metal Gear ZEKE.</detail>
+ </trophy>
+ <trophy id="037" hidden="yes" ttype="S" pid="000">
+  <name>Completed ZEKE</name>
+  <detail>Customized ZEKE's head parts and foot parts with special AI weapon parts.</detail>
+ </trophy>
+ <trophy id="038" hidden="no" ttype="B" pid="000">
+  <name>OUTER OPS Sortie</name>
+  <detail>Carried out a mission in OUTER OPS.</detail>
+ </trophy>
+ <trophy id="039" hidden="no" ttype="S" pid="000">
+  <name>Elite Forces</name>
+  <detail>Cleared "Capture the Enemy Base 06" in OUTER OPS using only soldiers.</detail>
+ </trophy>
+ <trophy id="040" hidden="no" ttype="B" pid="000">
+  <name>Trader</name>
+  <detail>Carried out a trade.</detail>
+ </trophy>
+ <trophy id="041" hidden="no" ttype="B" pid="000">
+  <name>Deliverer</name>
+  <detail>Sent an item using Delivery.</detail>
+ </trophy>
+ <trophy id="042" hidden="no" ttype="B" pid="000">
+  <name>Paz Mania</name>
+  <detail>Obtained Rank S on a date with Paz.</detail>
+ </trophy>
+ <trophy id="043" hidden="no" ttype="B" pid="000">
+  <name>Kaz Mania</name>
+  <detail>Obtained Rank S on a date with Kaz.</detail>
+ </trophy>
+ <trophy id="044" hidden="no" ttype="B" pid="000">
+  <name>That looks tasty!</name>
+  <detail>Nicely cooked a ration.</detail>
+ </trophy>
+ <trophy id="045" hidden="no" ttype="B" pid="000">
+  <name>VERSUS OPS All Rules</name>
+  <detail>Played using all of the rules in VERSUS OPS.</detail>
+ </trophy>
+ <trophy id="046" hidden="yes" ttype="G" pid="000">
+  <name>Vic Vos</name>
+  <detail>Reached a total of 20,000 or more Camaraderie.</detail>
+ </trophy>
+ <trophy id="047" hidden="no" ttype="B" pid="000">
+  <name>Divine Wind</name>
+  <detail>Collected a soldier using a divine wind.</detail>
+ </trophy>
+ <trophy id="048" hidden="yes" ttype="B" pid="000">
+  <name>Basilisk Eater</name>
+  <detail>Defeated Pupa, Chrysalis, Cocoon, Peace Walker.</detail>
+ </trophy>
+ <trophy id="049" hidden="yes" ttype="S" pid="000">
+  <name>Steel Eater</name>
+  <detail>Defeated all AI weapons.</detail>
+ </trophy>
+</trophyconf>
