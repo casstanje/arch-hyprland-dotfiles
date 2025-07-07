@@ -1,0 +1,148 @@
+Version: 1.2
+Anchors:
+  MGS4_All_Games: &MGS4_All_Games
+    "Metal Gear Solid 4: Guns of the Patriots":
+      BLES00246: [ All ]
+      BLUS30109: [ All ]
+      BLJM67001: [ All ]
+      NPUB31633: [ All ]
+      NPEB02182: [ All ]
+      NPJB00698: [ All ]
+
+  MGS4_CrashWorkaround_Notes: &MGS4_CrashWorkaround_Notes
+    "Workaround for 0x68 crash."
+
+  MGS4_FlickerWorkaround_Notes: &MGS4_FlickerWorkaround_Notes
+    "Workaround for flickering ground textures."
+
+PPU-33e09a0bd8fa2a3b28780a3feeb7b0e018bae381:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001409f8, 0x60000000 ]
+      - [ be32, 0x00140a10, 0x60000000 ]
+      - [ be32, 0x00140a44, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLUS30109: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000eaac8, 0x60003000 ]
+
+PPU-c937999ea44fb6260455b85c9f25eea55b1208b9:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001409f8, 0x60000000 ]
+      - [ be32, 0x00140a10, 0x60000000 ]
+      - [ be32, 0x00140a44, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLES00246: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000eaac8, 0x60003000 ]
+
+PPU-c19b3b57017488d9bd126a4b6cfba3566e0905fb:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLJM67001: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x001409f8, 0x60000000 ]
+      - [ be32, 0x00140a10, 0x60000000 ]
+      - [ be32, 0x00140a44, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        BLJM67001: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000eaac8, 0x60003000 ]
+
+PPU-bbf4c85f1c01e182e7f96d34f734772c4430a426:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013f298, 0x60000000 ]
+      - [ be32, 0x0013f2b0, 0x60000000 ]
+      - [ be32, 0x0013f2e4, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPUB31633: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000e9388, 0x60003000 ]
+
+PPU-347d16fbdb0a12f1083c0fb98343c4642d4641cb:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPEB02182: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013f298, 0x60000000 ]
+      - [ be32, 0x0013f2b0, 0x60000000 ]
+      - [ be32, 0x0013f2e4, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPEB02182: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000e9388, 0x60003000 ]
+
+PPU-2b65154021bb8c3b25616324975af795720c5f78:
+  "Crash fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPJB00698: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_CrashWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x0013f298, 0x60000000 ]
+      - [ be32, 0x0013f2b0, 0x60000000 ]
+      - [ be32, 0x0013f2e4, 0x60000000 ]
+  "Flickering textures fix":
+    Games:
+      "Metal Gear Solid 4: Guns of the Patriots":
+        NPJB00698: [ 02.00 ]
+    Author: "TriggerHappy"
+    Notes: *MGS4_FlickerWorkaround_Notes
+    Patch Version: 1.0
+    Patch:
+      - [ be32, 0x000e9388, 0x60003000 ]

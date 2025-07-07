@@ -40,6 +40,8 @@ rpcs3/**/*.yml
 rpcs3/uuid
 rpcs3/**.log
 !rpcs3/config.yml
+!rpcs3/custom_configs/*.yml
+!rpcs3/patches/*.yml
 
 hypr/monitors.conf
 hypr/workspaces.conf
