@@ -31,4 +31,4 @@ hypr/monitors.conf
 hypr/workspaces.conf
 
 # RPCS3 savedata
-!rpcs3/*/*/*/*/*/*
+!rpcs3/dev_hdd0/home/00000001/savedata/*
