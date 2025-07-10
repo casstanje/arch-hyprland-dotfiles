@@ -99,7 +99,8 @@
             "warning": 20,
             "critical": 10
         },
-        "tooltip": true
+        "tooltip": true,
+	"on-click": "shutdown -h now"
     },
 
     "network": {
