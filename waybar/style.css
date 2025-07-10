@@ -31,13 +31,18 @@ tooltip {
     padding: 2px 8px;
 }
 
+#custom-power {
+    margin: 6px 0px 6px 0px;
+    padding: 2px 1px 2px 8px;
+}
+
 #custom-dunst-dnd {
     margin: 6px 6px 6px 0px;
     padding: 2px 13px 2px 8px;
 }
 
 #battery { /* Extra right padding */
-    margin: 6px 0px 6px 0px;
+    margin: 6px 6px 6px 0px;
     padding: 2px 10px 2px 8px;
 }
 
@@ -77,6 +82,7 @@ tooltip {
 #pulseaudio,
 #custom-currentlayout,
 #custom-dunst-dnd,
+#custom-power,
 #mpris {
     background-color: #1e1e2e;
     border: 2px solid #a6e3a1;
