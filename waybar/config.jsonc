@@ -20,6 +20,7 @@
     ],
 
     "modules-center": [
+        "image#album-art",
         "mpris"
     ],
 
@@ -46,6 +47,12 @@
         "seperate-outputs": false,
         "icon": true,
         "icon-size": 18
+    },
+
+    "image#album-art": {
+        "exec": "bash ~/.config/waybar/scripts/get-current-album-cover.sh",
+        "size": 25,
+        "interval": 1
     },
 
     "mpris": {

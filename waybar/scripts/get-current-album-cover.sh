@@ -1,6 +1,9 @@
 #!/bin/bash
-coverPath=$(playerctl --player=chromium,%any metadata --format {{mpris:artUrl}})
-if [[ $coverPath == *"file://"* ]]; then
+coverPath=$(playerctl -s --player=chromium,%any metadata --format {{mpris:artUrl}})
+status=$(playerctl -s status)
+if [ "${status}" = "" ]; then
+    echo "$HOME/.config/waybar/resources/transparent_square.png"
+elif [[ $coverPath == *"file://"* ]]; then
     DATA=$coverPath
     pattern="file://"
     DATA=${DATA/$pattern/}
