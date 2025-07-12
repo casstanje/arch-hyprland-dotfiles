@@ -37,12 +37,19 @@ tooltip > * {
 #custom-dunst-dnd,
 #custom-power,
 #mpris,
+#power-profiles-daemon,
 #window {
     background-color: transparent;
     border: 1px solid #45475a;
     color: #cdd6f4;
     margin: 8px 6px 8px 0px;
     padding: 2px 8px;
+}
+
+window#waybar.empty #window {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 #clock {
@@ -52,6 +59,9 @@ tooltip > * {
 #image.album-art {
     margin-right: 6px;
     border-radius: 4px;
+}
+#pulseaudio-slider {
+    padding: 0 20px;
 }
 
 #mpris {

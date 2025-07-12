@@ -11,11 +11,12 @@
     "modules-left": [
         // "hyprland/workspaces",
 	    "custom/power",
+        "power-profiles-daemon",
         "battery",
         "pulseaudio",
         "memory",
         "cpu",
-        "network",
+        //"network",
         "hyprland/window"
     ],
 
@@ -141,5 +142,18 @@
         "nospacing": 1,
         "on-click": "pavucontrol",
         "tooltip": false
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": " perf",
+            "performance": " perf",
+            "balanced": "  balanced",
+            "power-saver": "  save"
+        }
     }
+
 }
