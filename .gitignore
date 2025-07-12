@@ -23,6 +23,8 @@
 !cava/**
 !wofi
 !wofi/**
+!quickshell
+!quickshell/**
 !nemo
 !nemo/**
 !nwg-look
