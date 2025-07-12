@@ -149,10 +149,10 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-            "default": " perf",
-            "performance": " perf",
-            "balanced": "  balanced",
-            "power-saver": "  save"
+            "default": " ",
+            "performance": " ",
+            "balanced": "  ",
+            "power-saver": "  "
         }
     }
 
