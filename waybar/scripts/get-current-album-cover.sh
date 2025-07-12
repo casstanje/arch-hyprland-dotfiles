@@ -1,13 +1,19 @@
 #!/bin/bash
-coverPath=$(playerctl -s --player=chromium,%any metadata --format {{mpris:artUrl}})
+coverUrl=$(playerctl -s --player=%any metadata --format {{mpris:artUrl}})
 status=$(playerctl -s status)
 if [ "${status}" = "" ]; then
     echo "$HOME/.config/waybar/resources/transparent_square.png"
-elif [[ $coverPath == *"file://"* ]]; then
-    DATA=$coverPath
+elif [[ $coverUrl == *"file://"* ]]; then
+    DATA=$coverUrl
     pattern="file://"
     DATA=${DATA/$pattern/}
     echo "${DATA}"
 else
-    echo "$HOME/.config/waybar/resources/album_cover_placeholder.png"
+    file="$HOME/.config/waybar/resources/tmp/album-cover.png"
+    if test -e "$file"
+    then zflag="-z '$file'"
+    else zflag=
+    fi
+    curl -s -o "$file" $zflag "$coverUrl"
+    echo "$HOME/.config/waybar/resources/tmp/album-cover.png"
 fi

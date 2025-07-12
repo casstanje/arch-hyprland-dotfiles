@@ -87,7 +87,8 @@ window#waybar.empty #window {
 #custom-currentlayout:hover,
 #custom-dunst-dnd:hover,
 #custom-power:hover,
-#mpris:hover {
+#mpris:hover,
+#power-profiles-daemon:hover {
     background-color: #313244;
 }
 
