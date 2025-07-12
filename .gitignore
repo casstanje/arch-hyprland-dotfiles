@@ -29,6 +29,8 @@
 !nemo/**
 !nwg-look
 !nwg-look/**
+!eww
+!eww/**
 !rpcs3
 !rpcs3/**
 rpcs3/dev_flash/**

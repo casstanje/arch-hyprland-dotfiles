@@ -1,0 +1,83 @@
+(defpoll time 
+    :interval "1s"
+    :initial "initial-value"
+    `LC_TIME=en_US.utf8 date +"%a %d/%m/%y | week %U | %H:%M"`    
+)
+
+
+
+(defwindow taskBar
+    :monitor 0
+    :class "barWindow"
+    :geometry (geometry 
+        :x "0%"
+        :y "16px"
+        :width "100%"
+        :height: "30px"
+        :anchor: "top center"
+    )
+    :vexpand true
+    :stacking "fg"
+    :reserve (struts 
+        :distance "4%" 
+        :side "top"
+    )
+    :windowtype "dock"
+    :exlusive false
+    (box 
+        :class "barContainer"
+        (centerbox
+            :class "bar"
+            :orientation "h"
+            (box "wow")
+            (clock)
+            (rightside)
+        )
+    )
+)
+
+(defwidget center []
+    (box
+        :halign "center"
+        "center"
+    )
+)
+
+(defwidget rightside []
+    (box
+        :halign "end"
+        (systray
+            :spacing 2
+            :space-evenly false
+            :icon-size 18
+        )
+        (clock)
+    )
+)
+
+(defwidget clock []
+    (box
+        time
+    )
+)
+
+
+(defwidget greeter [?text name] 
+    (labeled-container 
+        :orientation "horizontal"
+        :halign "center"
+        :name text
+        (button
+            :onclick "notify-send 'Hello' 'Hello, ${name}'"
+            "Greet"
+        )
+    )
+)
+
+(defwidget labeled-container [name]
+    (box
+        :class "container"
+        name
+        (children)
+    )
+)
