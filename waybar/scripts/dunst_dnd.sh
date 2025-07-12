@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ $(dunstctl is-paused) != true ]; then 
-    echo 'i 󰋑 󰂚' 
+    echo '󰂚' 
 else 
-    echo 'i 󰋔 󰂛' 
+    echo '󰂛' 
 fi

@@ -36,13 +36,65 @@ $mocha-crust: #11111b;
 }
 
 .barContainer {
-    padding: 0px 16px;
+    padding: 0px 8px;
 }
 
 .bar {
     background: $mocha-base;
     border-radius: 4px;
-    border-color: $mocha-green;
-    border-width: 2px;
+    border: 2px solid $mocha-green;
     padding: 8px 8px;
+}
+
+.songProgress trough{
+    background-color: $mocha-crust;
+    border-radius: 60;
+    min-width: 100px;
+}
+
+.songProgress progress{
+    background-color: $mocha-green;
+    border-radius: 60;
+}
+
+.songProgress.paused progress{
+    background-color: $mocha-yellow;
+}
+
+.albumArtCover {
+    background-size: contain;
+}
+
+tooltip {
+    background: $mocha-base;
+    border-radius: 4px;
+    border: 2px solid $mocha-green;
+}
+
+
+.systemTray menu {
+    border-radius: 4px;
+    background-color: $mocha-surface0;
+    border: 2px solid $mocha-green;
+    padding: 2px;
+
+    >menuitem {
+        padding: 0px 5px;
+        margin: 2px;
+        border-radius: 4px;
+
+        &:disabled label {
+            color: $mocha-surface2;
+        }
+
+        &:hover {
+            color: $mocha-green;
+            background-color: $mocha-base;
+        }
+    }
+
+    separator {
+        padding-top: 4px;
+        background-color: transparent;
+	}
 }
