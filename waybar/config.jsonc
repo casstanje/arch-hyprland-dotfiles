@@ -10,7 +10,7 @@
 
     "modules-left": [
         // "hyprland/workspaces",
-	    "custom/power",
+	    "group/power",
         "power-profiles-daemon",
         "battery",
         "pulseaudio",
@@ -26,21 +26,50 @@
     ],
 
     "modules-right": [
+	"custom/gay",
         "tray",
         "custom/dunst-dnd",
         "clock"
     ],
 
+
+    "group/power": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "power-item",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/power",
+            "custom/logout",
+            "custom/reboot"
+        ]
+    },
+    
     "custom/power": {
         "format" : "⏻ ",
-        "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "~/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "shutdown -h now",
-            "reboot": "reboot",
-            "logout": "hyprctl dispatch exit"
-        }
+        "tooltip": true,
+        "tooltip-format": "shutdown",
+        "on-click": "shutdown -h now"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": true,
+        "tooltip-format": "reboot",
+        "on-click": "reboot"
+    },
+
+    "custom/logout": {
+        "format": "󰩈",
+        "tooltip": true,
+        "tooltip-format": "log out",
+        "on-click": "hyprctl dispatch exit"
+    },
+
+    "custom/gay": {
+	"format": "🏳️‍🌈 🏳️‍⚧️"
     },
 
     "hyprland/window": {

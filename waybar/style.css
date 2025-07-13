@@ -37,7 +37,9 @@ tooltip > * {
 #custom-dunst-dnd,
 #custom-power,
 #mpris,
+#custom-gay,
 #power-profiles-daemon,
+.power-item > *,
 #window {
     background-color: transparent;
     border: 1px solid #45475a;
@@ -88,7 +90,8 @@ window#waybar.empty #window {
 #custom-dunst-dnd:hover,
 #custom-power:hover,
 #mpris:hover,
-#power-profiles-daemon:hover {
+#power-profiles-daemon:hover,
+.power-item > *:hover {
     background-color: #313244;
 }
 
