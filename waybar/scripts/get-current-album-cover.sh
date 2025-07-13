@@ -9,11 +9,25 @@ elif [[ $coverUrl == *"file://"* ]]; then
     DATA=${DATA/$pattern/}
     echo "${DATA}"
 else
+    # Path to download album art to
     file="$HOME/.config/waybar/resources/tmp/album-cover.png"
+
+    # Check if file exists and set z falg accordingly
     if test -e "$file"
     then zflag="-z '$file'"
     else zflag=
     fi
-    curl -s -o "$file" $zflag "$coverUrl"
-    echo "$HOME/.config/waybar/resources/tmp/album-cover.png"
+
+    # if file was downloaded correctly, return the downloaded cover. Else, return the placeholder
+    gotImage=false
+    if [ "$coverUrl" != "" ]; then
+        if curl -s -o "$file" $zflag "$coverUrl"
+        then gotImage=true
+        fi
+    fi
+    
+    if [ "$gotImage" = true ];
+    then echo "$file"
+    else echo "$HOME/.config/waybar/resources/album_cover_placeholder.png"
+    fi
 fi
