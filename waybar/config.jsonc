@@ -73,7 +73,7 @@
     },
 
     "hyprland/window": {
-        "format": "{initialTitle}",
+        "format": "{class}",
         "seperate-outputs": false,
         "icon": true,
         "icon-size": 18
