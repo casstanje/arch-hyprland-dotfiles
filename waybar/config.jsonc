@@ -86,12 +86,12 @@
     },
 
     "mpris": {
-        "format": "{status_icon} {dynamic}",
+        "format": "{status_icon} <i>{dynamic}</i> [{position}:{length}]",
         "status-icons": {
             "paused": "▶",
             "playing": "⏸"
         },
-        "dynamic-order": ["artist", "album", "title", "position", "length"],
+        "dynamic-order": ["artist", "album", "title"],
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "on-click-right": "",
