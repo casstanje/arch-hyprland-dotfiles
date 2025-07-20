@@ -95,7 +95,9 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "on-click-right": "",
-        "tooltip": false
+	"title-len": 50,
+	"dynamic-len": 50,
+        "tooltip": true
     },
 
     "tray": {
