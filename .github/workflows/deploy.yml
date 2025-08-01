@@ -5,9 +5,13 @@ on:
     branches:
       - public
 
+permissions:
+  contents: write
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
