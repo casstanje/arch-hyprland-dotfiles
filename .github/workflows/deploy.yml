@@ -16,7 +16,7 @@ jobs:
 
       - name: Push to public repository
         run: |
-          git remote add arch-hyprland-dotlfiles https://github.com/casstanje/arch-hyprland-dotlfiles.git
-          git push arch-hyprland-dotlfiles main:main --force
+          git remote add arch-hyprland-dotfiles https://github.com/casstanje/arch-hyprland-dotfiles.git
+          git push arch-hyprland-dotfiles main:main --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
