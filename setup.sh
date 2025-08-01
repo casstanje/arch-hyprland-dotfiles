@@ -182,6 +182,7 @@ else
     if [ "$installDotfiles" = "y" ] || [ "$installDotfiles" = "Y" ] || [ "$installDotfiles" == "" ]; then
         cd "$SCRIPT_DIR" || exit
         
+        echo
         echo "Installing catppuccin GTK theme (https://github.com/catppuccin/gtk/)"
         if python3 catppuccin-gtk-install.py mocha green > /dev/null ; then
             echo "Catppuccin GTK theme installed successfully. Continuing..."
@@ -189,9 +190,10 @@ else
             echo "Couldn't install theme. Continuing..."
         fi
 
+        echo
         echo "Installing SDDM theme"
         cd "$HOME"/Downloads || exit
-        wget https://github.com/catppuccin/sddm/releases/latest/download/catppuccin-mocha-green-sddm.zip > /dev/null
+        wget -q https://github.com/catppuccin/sddm/releases/latest/download/catppuccin-mocha-green-sddm.zip > /dev/null
         sudo mkdir -p /usr/share/sddm/themes/catppuccin-mocha-green
         sudo unzip -o -q catppuccin-mocha-green-sddm.zip -d /usr/share/sddm/themes/catppuccin-mocha-green
         sudo rm -f /etc/sddm.conf
@@ -200,9 +202,11 @@ else
 
         cd "$SCRIPT_DIR" || exit
 
-        echo "Copying dotfiles"
+        echo
+        echo "Copying dotfiles..."
         cp -r dotfiles/.config/. "$HOME"/.config/
 
+        echo
         echo "Preferred keyboard layout (country code, e.g. 'gb' for great britain, 'de' for german, 'us' for united states)"
         chosenKeyboardLayout=1
         countryCodeRegex='\b(ad|ae|af|ag|ai|al|am|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bl|bm|bn|bo|bq|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|cr|cu|cv|cw|cx|cy|cz|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mf|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|sk|sl|sm|sn|so|sr|ss|st|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tr|tt|tv|tw|tz|ua|ug|um|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)\b'
@@ -220,6 +224,9 @@ else
 
 
     fi
+
+    echo
+    echo "-----"
     echo "Installation done!"
     echo "Would you like to reboot now? [N/y]"
     read -s -n 1 shouldReboot

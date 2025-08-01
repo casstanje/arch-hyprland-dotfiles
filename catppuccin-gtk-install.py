@@ -11,12 +11,12 @@ from pathlib import Path
 from dataclasses import dataclass
 from urllib.request import urlopen, Request
 
-logger = logging.getLogger("catppuccin-gtk")
-logger.setLevel(logging.DEBUG)
+# logger = logging.get# logger("catppuccin-gtk")
+# logger.setLevel(logging.DEBUG)
 ch = logging.StreamHandler()
 formatter = logging.Formatter("[%(name)s] [%(levelname)s] - %(message)s")
 ch.setFormatter(formatter)
-logger.addHandler(ch)
+# logger.addHandler(ch)
 
 
 @dataclass
@@ -108,18 +108,18 @@ def fetch_zip(url: str) -> Optional[zipfile.ZipFile]:
     req = Request(url)
 
     zip_file = None
-    logger.info("Starting download...")
+    # logger.info("Starting download...")
     with urlopen(req) as response:
-        logger.info(f"Response status: {response.status}")
+        # logger.info(f"Response status: {response.status}")
         zip_file = zipfile.ZipFile(io.BytesIO(response.read()))
-    logger.info("Download finished, zip is valid")
+    # logger.info("Download finished, zip is valid")
 
-    logger.info("Verifying download..")
+    # logger.info("Verifying download..")
     first_bad_file = zip_file.testzip()
     if first_bad_file is not None:
-        logger.error(f'Zip appears to be corrupt, first bad file is "{first_bad_file}"')
+        # logger.error(f'Zip appears to be corrupt, first bad file is "{first_bad_file}"')
         return None
-    logger.info("Download verified")
+    # logger.info("Download verified")
     return zip_file
 
 
@@ -133,16 +133,17 @@ def add_libadwaita_links(ctx: InstallContext, rewrite: bool = False):
     gtk4_dir = (Path(os.path.expanduser("~")) / ".config" / "gtk-4.0").absolute()
     os.makedirs(gtk4_dir, exist_ok=True)
 
-    logger.info("Adding symlinks for libadwaita")
-    logger.info(f"Root:   {dir_name}")
-    logger.info(f"Target: {gtk4_dir}")
+    # logger.info("Adding symlinks for libadwaita")
+    # logger.info(f"Root:   {dir_name}")
+    # logger.info(f"Target: {gtk4_dir}")
     try:
         if rewrite:
             os.remove(gtk4_dir / "assets")
             os.remove(gtk4_dir / "gtk.css")
             os.remove(gtk4_dir / "gtk-dark.css")
     except FileNotFoundError:
-        logger.debug("Ignoring FileNotFound in symlink rewrite")
+        pass
+        # logger.debug("Ignoring FileNotFound in symlink rewrite")
 
     os.symlink(dir_name / "assets", gtk4_dir / "assets")
     os.symlink(dir_name / "gtk.css", gtk4_dir / "gtk.css")
@@ -151,15 +152,15 @@ def add_libadwaita_links(ctx: InstallContext, rewrite: bool = False):
 
 def install(ctx: InstallContext):
     url = build_release_url(ctx)
-    logger.info(ctx.build_info())
+    # logger.info(ctx.build_info())
 
     zip_file = fetch_zip(url)
     if zip_file is None:
         return
 
-    logger.info("Extracting...")
+    # logger.info("Extracting...")
     zip_file.extractall(ctx.dest)
-    logger.info("Extraction complete")
+    # logger.info("Extraction complete")
 
     if ctx.link:
         add_libadwaita_links(ctx)
@@ -167,32 +168,32 @@ def install(ctx: InstallContext):
 
 def install_from_artifact(ctx: InstallContext, artifact_path: Path):
     # Working from a pull request, special case it
-    logger.info(f"Extracting artifact from '{artifact_path}'")
+    # logger.info(f"Extracting artifact from '{artifact_path}'")
     artifacts = zipfile.ZipFile(artifact_path)
 
-    logger.info("Verifying artifact...")
+    # logger.info("Verifying artifact...")
     first_bad_file = artifacts.testzip()
     if first_bad_file is not None:
-        logger.error(f'Zip appears to be corrupt, first bad file is "{first_bad_file}"')
+        # logger.error(f'Zip appears to be corrupt, first bad file is "{first_bad_file}"')
         return None
-    logger.info("Artifact verified")
+    # logger.info("Artifact verified")
 
-    logger.info(ctx.build_info(False))
+    # logger.info(ctx.build_info(False))
 
     # The zip, inside the artifacts, that we want to pull out
     zip_name = f"catppuccin-{ctx.flavor}-{ctx.accent}-standard+default.zip"
-    logger.info(f"Pulling '{zip_name}' from the artifacts")
+    # logger.info(f"Pulling '{zip_name}' from the artifacts")
     info = artifacts.getinfo(zip_name)
 
-    logger.info("Extracting the artifact...")
+    # logger.info("Extracting the artifact...")
     artifact = zipfile.ZipFile(io.BytesIO(artifacts.read(info)))
     artifact.extractall(ctx.dest)
-    logger.info("Extraction complete")
+    # logger.info("Extraction complete")
 
     if ctx.link:
-        logger.info("Adding links (with rewrite)")
+        # logger.info("Adding links (with rewrite)")
         add_libadwaita_links(ctx, True)
-        logger.info("Links added")
+        # logger.info("Links added")
 
 
 def main():
@@ -213,10 +214,11 @@ def main():
         return
 
     install(ctx)
-    logger.info("Theme installation complete!")
+    # logger.info("Theme installation complete!")
 
 
 try:
     main()
 except Exception as e:
-    logger.error("Something went wrong when installing the theme:", exc_info=e)
+    pass
+    # logger.error("Something went wrong when installing the theme:", exc_info=e)
