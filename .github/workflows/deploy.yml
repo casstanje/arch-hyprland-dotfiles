@@ -22,4 +22,4 @@ jobs:
       - name: Push to public repository
         run: |
           git remote add arch-hyprland-dotfiles https://github.com/casstanje/arch-hyprland-dotfiles.git
-          git push arch-hyprland-dotfiles public:main --force
+          git push -f arch-hyprland-dotfiles public:main --force
