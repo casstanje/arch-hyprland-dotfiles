@@ -1,0 +1,26 @@
+name: Deploy to Public Repo
+
+on:
+  push:
+    branches:
+      - public
+
+permissions:
+  contents: write
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+        with:
+          ref: public
+
+      - name: Push to public repository
+        run: |
+          git remote add arch-hyprland-dotlfiles https://github.com/casstanje/arch-hyprland-dotlfiles.git
+          git push arch-hyprland-dotlfiles main:main --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
