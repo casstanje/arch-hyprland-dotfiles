@@ -31,6 +31,8 @@
 !nwg-look/**
 !eww
 !eww/**
+!bashrc
+!bashrc/**
 !rpcs3
 !rpcs3/**
 rpcs3/dev_flash/**
