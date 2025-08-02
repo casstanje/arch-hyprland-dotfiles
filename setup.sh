@@ -198,9 +198,9 @@ else
         sudo unzip -o -q catppuccin-mocha-green-sddm.zip -d /usr/share/sddm/themes/catppuccin-mocha-green
         sudo rm -f /etc/sddm.conf
         sudo tee -a /etc/sddm.conf > /dev/null <<-EOT
-	[Theme]
-	Current=catppuccin-mocha-green
-	EOT
+        [Theme]
+        Current=catppuccin-mocha-green
+        EOT
 
         cd "$SCRIPT_DIR" || exit
 
