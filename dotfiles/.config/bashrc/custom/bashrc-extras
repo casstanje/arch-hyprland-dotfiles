@@ -1,0 +1,105 @@
+# My Functions and Aliases
+alias shutup='systemctl poweroff'
+function pullall {
+	cd ~/.config
+	echo " "
+	echo "-"
+	echo "Checking ~/.config"
+	git pull
+	for d in ~/Desktop/Projects-And-Art/*/; do
+		echo " "
+		echo "-"
+		echo "Checking $(basename $d)..."
+		if [ -d "$d/.git" ]; then
+			cd "$d"
+			git pull
+		else
+			echo "Not a git directory. Continuing..."
+		fi
+	done
+	cd ~
+}
+
+function pushall {
+	cd ~/.config
+	echo " "
+	echo "-"
+	echo "Checking ~/.config"
+	git add .
+	name=$(hostname)
+	message="Commited from $name, no message added"
+	if [ "$1" == message ]; then
+		read -p "Input Message: "
+		message=$REPLY
+	fi
+	git commit -m "$message"
+	git push
+	for d in ~/Desktop/Projects-And-Art/*/; do
+		echo " "
+		echo "-"
+		echo "Checking $(basename $d)..."
+		if [ -d "$d/.git" ]; then
+			cd "$d"
+			git pull
+			if [ -n "$(git status --porcelain)" ]; then
+				git add --all
+				name=$(hostname)
+				message="Commited from $name, no message added"
+				if [ "$1" == message ]; then
+					read -p "Input Message: "
+					message=$REPLY
+				fi
+				git commit -m "$message"
+				git push
+			fi
+		else
+			echo "Not a git directory. Continuing..."
+		fi
+	done
+	cd ~
+}
+
+function mytime {
+	if [ "$1" == message ] || [ "$2" == message ] || [ "$3" == message ]; then
+		pushall message
+	else
+		pushall
+	fi
+	if [ "$1" == onedrive ] || [ "$2" == onedrive ] || [ "$3" == onedrive ]; then
+		onedrive -s
+	fi
+		echo
+		echo "-"
+	if [ "$1" == shutup ] || [ "$2" == shutup ] || [ "$3" == shutup ]; then
+		shutup
+	else
+		read -p "Shutdown? (Yy/Nn) " -n 1 -r
+		echo # (optional) move to a new line
+		if [[ $REPLY =~ ^[Yy]$ ]]
+			then
+			shutup
+		fi
+	fi
+}
+
+function mp3rename {
+	for f in *.mp3; do
+		title=$(ffprobe -v error -of csv=p=0 -show_entries format_tags=title "$f")
+		mv -- "$f" "$title".mp3
+	done
+}
+
+function resetplasma {
+	kquitapp6 plasmashell
+	kstart plasmashell
+}
+
+function resetgnome {
+	killall -3 gnome-shell
+}
+
+function update {
+	yay
+	flatpak update
+	sudo snap refresh
+}
