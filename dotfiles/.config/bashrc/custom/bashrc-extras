@@ -1,4 +1,5 @@
 # My Functions and Aliases
+$BROWSER='vivaldi'
 alias shutup='systemctl poweroff'
 function pullall {
 	cd ~/.config
