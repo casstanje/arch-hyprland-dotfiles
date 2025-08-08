@@ -1,13 +1,8 @@
 # My Functions and Aliases
-BROWSER='vivaldi'
+pathToGitRepos=~/Desktop/Projects-And-Art/*/
 alias shutup='systemctl poweroff'
 function pullall {
-	cd ~/.config
-	echo " "
-	echo "-"
-	echo "Checking ~/.config"
-	git pull
-	for d in ~/Desktop/Projects-And-Art/*/; do
+	for d in $pathToGitRepos; do
 		echo " "
 		echo "-"
 		echo "Checking $(basename $d)..."
@@ -22,20 +17,7 @@ function pullall {
 }
 
 function pushall {
-	cd ~/.config
-	echo " "
-	echo "-"
-	echo "Checking ~/.config"
-	git add .
-	name=$(hostname)
-	message="Commited from $name, no message added"
-	if [ "$1" == message ]; then
-		read -p "Input Message: "
-		message=$REPLY
-	fi
-	git commit -m "$message"
-	git push
-	for d in ~/Desktop/Projects-And-Art/*/; do
+	for d in $pathToGitRepos; do
 		echo " "
 		echo "-"
 		echo "Checking $(basename $d)..."
