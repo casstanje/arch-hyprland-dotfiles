@@ -1,5 +1,5 @@
 # My Functions and Aliases
-pathToGitRepos=~/mnt/shared-drive/Projects-And-Art/*/
+pathToGitRepos=/mnt/shared-drive/Projects-And-Art/*/
 alias shutup='systemctl poweroff'
 function pullall {
 	for d in $pathToGitRepos; do
