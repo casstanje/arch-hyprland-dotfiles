@@ -1,0 +1,9 @@
+custom_packages=(
+	"github-cli"
+	"zoxide"
+	"strawberry"
+	"vesktop-bin"
+	"protonmail-bridge"
+	"vivaldi"
+	"code"
+)
