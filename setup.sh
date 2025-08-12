@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# custom_packages_file='<path_to_file>'
+custom_packages_file="$SCRIPT_DIR/custom_packages"
 
 packages=(
     "wget"
