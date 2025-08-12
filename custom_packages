@@ -6,4 +6,5 @@ custom_packages=(
 	"protonmail-bridge"
 	"vivaldi"
 	"code"
+	"inotify-tools"
 )
