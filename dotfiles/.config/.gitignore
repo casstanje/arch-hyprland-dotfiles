@@ -35,6 +35,8 @@
 !bashrc/**
 !rpcs3
 !rpcs3/**
+!solaar
+!solaar/**
 rpcs3/dev_flash/**
 rpcs3/dev_hdd0/game/**
 rpcs3/dev_hdd1/**
