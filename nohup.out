@@ -1,0 +1,1 @@
+rules cannot access modifier keys in Wayland, accessing process only works on GNOME with Solaar Gnome extension installed
