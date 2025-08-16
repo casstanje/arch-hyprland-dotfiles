@@ -93,7 +93,7 @@ function resetgnome {
 }
 
 function update {
-	yay
-	flatpak update
-	sudo snap refresh
+	yay --noconfirm
+	flatpak update -y
+	sudo snap refresh -y
 }
