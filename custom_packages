@@ -5,6 +5,9 @@ custom_packages=(
 	"vesktop-bin"
 	"protonmail-bridge"
 	"vivaldi"
+	"zen-browser-bin"
 	"code"
 	"inotify-tools"
+	"breeze"
+	"breeze-gtk"
 )
