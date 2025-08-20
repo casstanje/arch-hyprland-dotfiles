@@ -25,7 +25,7 @@ packages=(
     "networkmanager"
     "network-manager-applet"
     "nm-connection-editor"
-    "dunst"
+    "swaync"
     "pavucontrol"
     "waybar"
     "kitty"
